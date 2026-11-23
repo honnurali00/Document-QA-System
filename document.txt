@@ -1,0 +1,14 @@
+
+course code: AID201A
+course title: Artificial Intelligence
+maximum marks: 15
+assignment: Assignment 1 - Design and develop an AI-based Document Question Answering System
+department: Department of Computer Science and Engineering
+programme: Artificial Intelligence
+semester: Not specified in the assignment brief
+assignment submission date: 20th November 2026
+document processing: Accept a suitable document, extract relevant information, and represent it in a Knowledge Base
+question processing: Identify relevant knowledge and apply search, rules, inference, or reasoning
+answer generation: Generate answers using the Knowledge Base and evaluate the system
+prohibited techniques: Natural Language Processing and Retrieval-Augmented Generation
+obtained marks: 12

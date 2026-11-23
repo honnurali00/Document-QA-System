@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DocuMind | Document QA System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">Docu<span>Mind.</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#assistant">Ask Questions</a>
+            <a href="#knowledge">Knowledge Base</a>
+            <a href="#evaluation">Evaluation</a>
+        </nav>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            System Ready
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <p class="eyebrow">RULE-BASED ARTIFICIAL INTELLIGENCE</p>
+
+                <h1>Ask your documents.<br>
+                    <span>Get clear answers.</span>
+                </h1>
+
+                <p class="hero-description">
+                    An intelligent document question-answering system
+                    powered by Python, knowledge representation
+                    and rule-based reasoning.
+                </p>
+
+                <a href="#assistant" class="primary-btn">
+                    Start Asking →
+                </a>
+            </div>
+
+            <div class="hero-card">
+                <div class="card-icon">✦</div>
+                <p class="small-label">DOCUMENT ASSISTANT</p>
+                <h2>Your knowledge,<br>one question away.</h2>
+                <div class="mini-line"></div>
+                <p class="card-footer">Python · Flask · Rule-Based AI</p>
+            </div>
+
+        </section>
+
+
+        <section class="assistant-section" id="assistant">
+
+            <div class="section-heading">
+                <p class="eyebrow">INTERACTIVE ASSISTANT</p>
+                <h2>Ask a Question</h2>
+                <p>Enter a question related to your loaded document.</p>
+            </div>
+
+            <div class="chat-container">
+
+                <div class="chat-header">
+                    <div>
+                        <strong>Document Assistant</strong>
+                        <p>Ready to answer your questions</p>
+                    </div>
+                    <span class="online-label">● Online</span>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message assistant-message">
+                        Hello! Ask me anything about the information
+                        available in the document.
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <input
+                        type="text"
+                        id="questionInput"
+                        placeholder="Example: What is the course code?"
+                    >
+
+                    <button id="askButton" onclick="askQuestion()">
+                        Ask →
+                    </button>
+                </div>
+
+                <div class="suggestions">
+                    <button onclick="quickQuestion('What is the course code?')">
+                        Course code
+                    </button>
+
+                    <button onclick="quickQuestion('What are the maximum marks?')">
+                        Maximum marks
+                    </button>
+
+                    <button onclick="quickQuestion('What is the submission date?')">
+                        Submission date
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="knowledge-section" id="knowledge">
+
+            <div class="section-heading">
+                <p class="eyebrow">INFORMATION STORAGE</p>
+                <h2>Knowledge Base</h2>
+                <p>Information extracted from the structured document.</p>
+            </div>
+
+            <div class="knowledge-grid" id="knowledgeGrid">
+                <p>Loading knowledge base...</p>
+            </div>
+
+        </section>
+
+
+        <section class="evaluation-section" id="evaluation">
+
+            <div class="section-heading">
+                <p class="eyebrow">SYSTEM PERFORMANCE</p>
+                <h2>System Evaluation</h2>
+                <p>Run the predefined test questions to evaluate the system.</p>
+            </div>
+
+            <div class="evaluation-card">
+                <div>
+                    <h3>Automated Evaluation</h3>
+                    <p>Four predefined test questions</p>
+                </div>
+
+                <button onclick="runEvaluation()">
+                    Run Tests →
+                </button>
+            </div>
+
+            <pre id="evaluationResults" class="results-box">
+Evaluation has not been run yet.
+            </pre>
+
+        </section>
+
+
+        <section class="reasoning-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">AI EXPLAINABILITY</p>
+                <h2>Reasoning Trace</h2>
+                <p>View the processing steps used to generate an answer.</p>
+            </div>
+
+            <pre id="reasoningOutput" class="results-box">
+Ask a question to view its reasoning trace.
+            </pre>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <h3>DocuMind.</h3>
+        <p>Document Question Answering System</p>
+        <p>Built using Python, Flask, HTML, CSS and JavaScript.</p>
+        <p class="copyright">© 2026 Document QA Project</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
